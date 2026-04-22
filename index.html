@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林承宥 | 個人門戶網站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 導航欄 -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-700">CHENG YU.</div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">首頁</a>
+                <a href="#about" class="hover:text-blue-600 transition">關於我</a>
+                <a href="#education" class="hover:text-blue-600 transition">學歷背景</a>
+                <a href="#contact" class="hover:text-blue-600 transition">聯絡資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-xl md:text-2xl mb-4 font-light tracking-widest">HELLO, I AM</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">林承宥</h1>
+            <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
+                國立屏東科技大學 · 工業管理系 · 大二學生
+            </p>
+            <div class="mt-10">
+                <a href="#about" class="bg-white text-blue-700 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition shadow-lg">
+                    探索更多
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- 關於我 -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-48 h-48 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-6xl shadow-inner border-4 border-white">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-3xl font-bold mb-4 border-l-4 border-blue-600 pl-4">關於我</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        你好！我是林承宥，目前就讀於<strong>屏東科技大學工業管理系</strong>二年級。我對流程優化、品質管理以及數據分析充滿興趣。在大學的學習過程中，我致力於結合管理理論與實務操作，期望能透過科學化的管理手段，解決現代產業中的效能問題。
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-location-dot text-blue-500 w-5"></i>
+                            <span>台灣，屏東</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-envelope text-blue-500 w-5"></i>
+                            <span>your-email@example.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-brain text-blue-500 w-5"></i>
+                            <span>問題分析與解決</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-chart-line text-blue-500 w-5"></i>
+                            <span>工業工程實務</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 學歷背景 -->
+    <section id="education" class="py-20 bg-gray-100 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h3 class="text-3xl font-bold mb-2">學歷背景</h3>
+            <p class="text-gray-500">Academic Background</p>
+        </div>
+        <div class="max-w-3xl mx-auto relative border-l-2 border-blue-200 pl-8 ml-4 md:ml-auto">
+            <!-- 大學 -->
+            <div class="mb-10 relative">
+                <div class="absolute -left-11 top-1 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <span class="text-blue-600 font-bold text-sm mb-2 block">2023 - 至今</span>
+                    <h4 class="text-xl font-bold mb-1">國立屏東科技大學</h4>
+                    <p class="text-gray-700 font-medium">工業管理系 | 二年級</p>
+                    <ul class="mt-4 text-gray-500 text-sm list-disc list-inside space-y-1">
+                        <li>專注於生產與作業管理研究</li>
+                        <li>統計學與品質管制應用實作</li>
+                        <li>積極參與系上專題探討</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 高中 -->
+            <div class="relative">
+                <div class="absolute -left-11 top-1 w-6 h-6 bg-gray-300 rounded-full border-4 border-white shadow-sm"></div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 opacity-80">
+                    <span class="text-gray-500 font-bold text-sm mb-2 block">畢業於</span>
+                    <h4 class="text-xl font-bold mb-1">您的母校高中名稱</h4>
+                    <p class="text-gray-600">高中部</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能關鍵字 -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-4">
+            <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">品質管理 (QC)</span>
+            <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">生產管理</span>
+            <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">作業研究</span>
+            <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">數據統計</span>
+            <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">工業工程</span>
+        </div>
+    </section>
+
+    <!-- 聯絡資訊 -->
+    <section id="contact" class="py-20 bg-blue-900 text-white px-4 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-3xl font-bold mb-6">讓我們保持聯繫</h3>
+            <p class="mb-10 opacity-80">如果您對我的專業領域或合作感興趣，歡迎透過電子郵件或社群媒體聯繫我。</p>
+            <div class="flex justify-center space-x-6 text-3xl mb-12">
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="text-sm opacity-50">&copy; 2024 林承宥 | Pingtung University of Science and Technology</p>
+        </div>
+    </section>
+
+    <script>
+        // 簡單的導航欄顏色變換特效
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4', 'shadow-sm');
+            } else {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
